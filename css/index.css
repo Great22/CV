@@ -1,0 +1,514 @@
+    div, body, h1, h2, fieldset, footer, input, textarea, p {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        border: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:link {
+        text-decoration: none;
+    }
+
+    a:active {
+        text-decoration: blink
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    a:visited {
+        text-decoration: none;
+    }
+
+    body {
+        font-size: 14px;
+        box-sizing: border-box;
+        background: #ecf0f1;
+    }
+
+    .content {
+        width: 1366px;
+        height: 625px;
+        overflow: hidden;
+    }
+
+    .content .screen {
+        width: 400%;
+        height: 625px;
+        animation: move 10s infinite;
+    }
+
+    .content .screen .img {
+        width: 25%;
+        height: 625px;
+        float: left;
+        position: relative;
+        /* animation: change  1.5s  infinite; */
+    }
+
+    @keyframes change {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(.2);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .screen .img .img-box img {
+        width: 100%;
+    }
+
+    @keyframes move {
+        0% {}
+        25% {
+            transform: translateX(0)
+        }
+        50% {
+            transform: translateX(-1366px)
+        }
+        75% {
+            transform: translateX(-2732px)
+        }
+        100% {
+            transform: translateX(-4098px)
+        }
+        101% {
+            transform: translateX(0)
+        }
+    }
+
+    .img .first {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -80%);
+    }
+
+    .first h1 {
+        font-size: 90px;
+        text-transform: uppercase;
+        font-weight: 900;
+        color: #2c3e5036;
+        background-image: url(../picture/water.jpg);
+        -webkit-background-clip: text;
+        animation: water 15s infinite;
+    }
+
+    .first h2 {
+        position: absolute;
+        left: 30%;
+        top: -250px;
+        font-size: 120px;
+        text-align: center;
+        font-weight: 900;
+        color: #e67e22;
+        /* transform:   skew(10deg) rotate(-30deg) ; */
+        /* animation: first_h2  1s  1s infinite; */
+    }
+
+    .img .second {
+        position: absolute;
+    }
+
+    @keyframes water {
+        from {
+            background-position: left 0 top 0;
+        }
+        to {
+            background-position: left 1000px top 0;
+        }
+    }
+
+    .third {
+        position: absolute;
+        left: 70%;
+        top: 5%;
+        color: #8e44ad;
+    }
+
+    .third h1, .third h2 {
+        width: 70px;
+        font-size: 70px;
+        word-wrap: break-word;
+        /* letter-spacing: 20px; */
+        /* animation:lighting  15s infinite; */
+        /* text-shadow: 5px 5px 5px #FF0; */
+        text-shadow: 0px 0px 8px #ff0, 0px 0px 4px #ff0, 0px 0px 72px #fd0, 0px 0px 5px #fa0;
+    }
+
+    @keyframes lighting {
+        0% {
+            text-shadow: 3px 3px 3px 3px yellow
+        }
+        100% {
+            text-shadow: 5px 3px 3px 3px yellow
+        }
+    }
+
+    .third h2 {
+        position: absolute;
+        left: 80px;
+        top: 250px;
+    }
+
+    .body {
+        width: 100%;
+        /* width:1366px; */
+        /* color:red; */
+    }
+
+    #navbar-brand {
+        color: #fff;
+    }
+
+    #navbar-nav li a:hover {
+        color: #27ae60;
+        font-weight: bold;
+        background: #ecf0f1;
+    }
+
+    .body-content {
+        height: 30000px;
+    }
+
+    .fixed {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 999;
+    }
+
+    /* 求职意向 */
+
+    #qiuzhi h2, #jishu h2, #geren h2, #zuopin h2, #contact h2, #zuopin h2 {
+        text-align: center;
+        font-size: 40px;
+        margin-top: 50px;
+    }
+
+    #qiuzhi .qzBox {
+        padding: 15px;
+        border-radius: 10%;
+        transition: 1s;
+    }
+
+    #qiuzhi .qzBox:hover p {
+        transform: translateY(10px);
+    }
+
+    #qiuzhi .qzBox:hover {
+        /* border:1px solid #FC0; */
+        box-shadow: 0 0 10px #f39c12;
+    }
+
+    .goods {
+        margin-top: 15px;
+    }
+
+    #qiuzhi .qzBox p {
+        text-align: center;
+    }
+
+    #qiuzhi .ptitle {
+        color: #E87E04;
+        margin: 2em 0 1em;
+        font-size: 16px;
+        font-family: "SimHei";
+        text-align: center;
+    }
+
+    #qiuzhi .qzBox p:not(.ptitle) {
+        color: grey;
+        /* font-size: 16px; */
+        margin-bottom: 15px;
+    }
+
+    #qiuzhi .qzBox img {
+        width: 50%;
+        height: 50%;
+    }
+
+    #body .col-xs-12>div[id] {
+        margin-top: 50px;
+    }
+
+    @keyframes brighten {
+        0% {
+            box-shadow: 0px 0px 15px #d35400;
+        }
+        25% {
+            box-shadow: 0px 0px 15px #2980b9
+        }
+        50% {
+            box-shadow: 0px 0px 15px #16a085;
+        }
+        75% {
+            box-shadow: 0px 0px 15px #8e44ad
+        }
+        100% {
+            box-shadow: 0px 0px 15px #d35400;
+        }
+    }
+
+    .skill-content {
+        margin-top: 230px;
+        transform-style: preserve-3d;
+    }
+
+    .lists {
+        height: 230px;
+        perspective: 800px;
+        transform-style: preserve-3d;
+        margin-top: 10vh;
+        transform: translateZ(500px);
+    }
+
+    .lists>div {
+        width: 80%;
+        height: 95%;
+        text-align: center;
+        border-radius: 10px;
+        position: absolute;
+        left: 15px;
+        top: 0;
+        transition: 1s;
+        backface-visibility: hidden;
+        animation: brighten 2s infinite;
+        border: 1px solid #ddd;
+    }
+
+    .show img {
+        width: 50px;
+        height: 50px;
+        margin-top: 40px;
+    }
+
+    .show p {
+        margin-top: 25px;
+        font-size: 20px;
+    }
+
+    .lists .back {
+        transform: rotateY(180deg);
+    }
+
+    .lists:hover .show {
+        transform: rotateY(-180deg);
+    }
+
+    .lists:hover .back {
+        transform: rotateY(0deg);
+    }
+
+    .back ul {
+        margin-top: 30px;
+    }
+
+    .back ul li {
+        word-wrap: break-word;
+        margin-top: 10px;
+        list-style-position: inside;
+        line-height: 2em;
+        text-align: left;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    /* 联系我   暂时弃用*/
+
+    #wrap {
+        width: 530px;
+        margin: 20px auto;
+        height: 500px;
+        box-sizing: border-box;
+    }
+
+    #wrap p {
+        font-size: 24px;
+    }
+
+    #form-wrap {
+        overflow: hidden;
+        height: 447px;
+        position: relative;
+        top: 0;
+        transition: all 1s ease-in-out 0.3s;
+    }
+
+    #form-wrap:before {
+        content: "";
+        position: absolute;
+        bottom: 128px;
+        left: 0;
+        background: url("../images/before.png");
+        width: 530px;
+        height: 317px;
+    }
+
+    #form-wrap:after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        background: url("../images/after.png");
+        width: 530px;
+        height: 259px;
+    }
+
+    #form-wrap.hide:after, #form-wrap.hide:before {
+        display: none;
+    }
+
+    #form-wrap:hover {
+        height: 777px;
+        top: -200px;
+    }
+
+    #wrap form {
+        background: #f0f0f0;
+        position: relative;
+        top: 200px;
+        border-radius: 10px;
+        overflow: hidden;
+        height: 200px;
+        width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #fff;
+        border-right: 3px;
+        transition: all 1s ease-in-out 0.3s;
+    }
+
+    #form-wrap:hover form {
+        height: 530px;
+    }
+
+    #wrap label {
+        margin: 11px 20px 5px 0;
+        font-size: 15px;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    #wrap input, #wrap textarea {
+        margin: 0 10px;
+    }
+
+    #wrap input[type=text], #wrap textarea {
+        font: 14px normal uppercase, arial, serif;
+        background: none;
+        width: 340px;
+        height: 37px;
+        padding: 0 10px;
+        border: 1px solid #f8f5f1;
+        border-radius: 5px;
+    }
+
+    #wrap textarea {
+        height: 80px;
+        padding-top: 14px;
+    }
+
+    #wrap textarea:focus, #wrap input[type=text]:focus {
+        background: #fff;
+    }
+
+    #wrap textarea, #wrap input {
+        color: goldenrod;
+    }
+
+    #wrap input[type=submit] {
+        position: relative;
+        font-size: 20px;
+        width: 340px;
+        height: 40px;
+        margin-top: 30px;
+        text-align: center;
+        opacity: 0;
+        color: #fff;
+        background: #2ecc71;
+        cursor: pointer;
+        border-radius: 3px;
+        transition: opacity 0.7s ease-in-out 0s;
+    }
+
+    #wrap:hover input[type=submit] {
+        z-index: 1;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out 0s;
+    }
+
+    /* 联系我2 */
+
+    /* 个人作品 */
+
+    #zuopin .center>div .imgbox img {
+        width: 100%;
+        border-radius: 10%;
+    }
+
+    #zuopin .center>div {
+        position: relative;
+        margin-bottom: 20px;
+        transition: .5s;
+        overflow: hidden;
+    }
+
+    #zuopin .center>div:hover {
+        transform: scale(1.1);
+        /* background: grey; */
+    }
+
+    #zuopin .center>div:hover .imgbox img {
+        opacity: 0.7;
+    }
+
+    #zuopin .center>div a {
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 10px;
+        color: #fff;
+    }
+
+    #zuopin .center>div a .cover h4 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        transition: .5s;
+        transform: translate(0, -180px) rotate(-90deg);
+        transform-origin: 0 0;
+        text-shadow: #d35400 1px 1px 4px;
+    }
+
+    #zuopin .center>div a .cover p {
+        line-height: 20px;
+        transition: 0.5s;
+        transform: translate(0, 150px);
+    }
+
+    #zuopin .center>div:hover .cover h4 {
+        transform: translate(0, 0) rotate(0);
+    }
+
+    #zuopin .center>div:hover .cover p {
+        transform: translate(0, 0);
+    }
+
+    /* 联系我 */
+
+    .good label {
+        margin-bottom: 10px;
+    }
